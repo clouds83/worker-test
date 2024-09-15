@@ -9,7 +9,7 @@ export default async function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: 5,
+      body: 2,
     })
 
     if (!response.ok) {
@@ -18,6 +18,8 @@ export default async function Home() {
     }
 
     const data = await response.json()
+
+    console.log(data)
   }
 
   return (
