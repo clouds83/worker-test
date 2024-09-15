@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { heavyFunction } from './utils/heavyFunction'
 const path = require('path')
 const { Worker } = require('worker_threads')
 
@@ -7,7 +8,8 @@ export async function POST(req, res) {
 
   console.log('start vvvvvvvvvvvvv')
 
-  const result = await workerPromise(multiplier)
+  // const result = await workerPromise(multiplier)
+  const result = heavyFunction(multiplier)
 
   console.log('end ^^^^^^^^^^^^^')
 
