@@ -8,8 +8,8 @@ export async function POST(req, res) {
 
   console.log('start vvvvvvvvvvvvv')
 
-  // const result = await workerPromise(multiplier)
-  const result = heavyFunction(multiplier)
+  const result = await workerPromise(multiplier)
+  // const result = heavyFunction(multiplier)
 
   console.log('end ^^^^^^^^^^^^^')
 

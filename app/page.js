@@ -3,8 +3,8 @@ import Link from 'next/link'
 export default async function Home() {
   async function heavyProcess() {
     'use server'
-
-    const response = await fetch('http://localhost:3000/api/heavy', {
+    const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
+    const response = await fetch(`${baseUrl}/api/heavy`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
