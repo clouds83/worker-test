@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { heavyFunction } from '../../../public/heavyFunction'
+import { heavyFunction } from './utils/heavyFunction'
 const path = require('path')
 const { Worker } = require('worker_threads')
 
