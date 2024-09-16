@@ -13,7 +13,7 @@ export default async function Home() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
+        console.info(data)
       })
 
     // if (!response.ok) {

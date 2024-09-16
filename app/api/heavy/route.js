@@ -6,12 +6,12 @@ const { Worker } = require('worker_threads')
 export async function POST(req, res) {
   const multiplier = await req.json()
 
-  console.log('start vvvvvvvvvvvvv')
+  console.info('start vvvvvvvvvvvvv')
 
   const result = await workerPromise(multiplier)
   // const result = heavyFunction(multiplier)
 
-  console.log('end ^^^^^^^^^^^^^')
+  console.info('end ^^^^^^^^^^^^^')
 
   return NextResponse.json({
     status: 200,
