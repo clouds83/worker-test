@@ -19,7 +19,7 @@ export async function POST(req, res) {
   })
 }
 
-function workerPromise(data) {
+async function workerPromise(data) {
   return new Promise((resolve, reject) => {
     const worker = new Worker(path.resolve('app/api/heavy/utils/worker.js'))
 
