@@ -1,8 +1,9 @@
 const path = require('path')
 const { parentPort } = require('worker_threads')
-// const heavyFunctionPath = path.resolve(__dirname, 'heavyFunction.js')
-// const { heavyFunction } = require(heavyFunctionPath)
-const { heavyFunction } = require(path.resolve('./heavyFunction'))
+const heavyFunctionPath = path.resolve(__dirname, 'heavyFunction.js')
+const { heavyFunction } = require(heavyFunctionPath)
+// const { heavyFunction } = require(path.resolve('./heavyFunction'))
+// const { heavyFunction } = require('./heavyFunction')
 
 parentPort.on('message', async (data) => {
   try {
