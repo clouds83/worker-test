@@ -1,13 +1,14 @@
 const path = require('path')
 const fs = require('fs')
 const { parentPort } = require('worker_threads')
-const heavyFunctionPath = path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js')
+// const heavyFunctionPath = path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js')
 // const { heavyFunction } = require(heavyFunctionPath)
 // const { heavyFunction } = require(path.resolve('./heavyFunction'))
+const { heavyFunction } = require('./heavyFunction.js')
 // const { heavyFunction } = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction'))
 // const { heavyFunction } = require(path.resolve('app/api/heavy/utils/heavyFunction'))
-const heavyFunctionCode = fs.readFileSync(heavyFunctionPath, 'utf-8')
-const heavyFunction = new Function('return ' + heavyFunctionCode)()
+// const heavyFunctionCode = fs.readFileSync(heavyFunctionPath, 'utf-8')
+// const heavyFunction = new Function('return ' + heavyFunctionCode)()
 
 parentPort.on('message', async (data) => {
   try {
