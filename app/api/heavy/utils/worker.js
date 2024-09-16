@@ -3,7 +3,7 @@ const { parentPort } = require('worker_threads')
 // const heavyFunctionPath = path.resolve(__dirname, 'heavyFunction.js')
 // const { heavyFunction } = require(heavyFunctionPath)
 // const { heavyFunction } = require(path.resolve('./heavyFunction'))
-const { heavyFunction } = require('./heavyFunction')
+// const { heavyFunction } = require('./heavyFunction')
 
 parentPort.on('message', async (data) => {
   try {
@@ -16,7 +16,7 @@ parentPort.on('message', async (data) => {
   }
 })
 
-// function heavyFunction(multiplier) {
-//   for (let i = 0; i < 1000000000 * multiplier; i++) {}
-//   return 'Heavy process done!'
-// }
+function heavyFunction(multiplier) {
+  for (let i = 0; i < 1000000000 * multiplier; i++) {}
+  return 'Heavy process done!'
+}
