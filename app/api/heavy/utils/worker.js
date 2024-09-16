@@ -8,8 +8,10 @@ const { parentPort } = require('worker_threads')
 // const { heavyFunction } = require(path.resolve('app/api/heavy/utils/heavyFunction'))
 // const heavyFunctionCode = fs.readFileSync(heavyFunctionPath, 'utf-8')
 // const heavyFunction = new Function('return ' + heavyFunctionCode)()
+
 // const { heavyFunction } = require('./heavyFunction.js')
-const { heavyFunction } = require(path.resolve('./heavyFunction.js'))
+// const { heavyFunction } = require(path.resolve('./heavyFunction.js'))
+const { heavyFunction } = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
 
 parentPort.on('message', async (data) => {
   try {
