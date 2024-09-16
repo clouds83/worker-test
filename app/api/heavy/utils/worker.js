@@ -3,11 +3,13 @@ const { parentPort } = require('worker_threads')
 // const heavyFunctionPath = path.resolve(__dirname, 'heavyFunction.js')
 // const { heavyFunction } = require(heavyFunctionPath)
 // const { heavyFunction } = require(path.resolve('./heavyFunction'))
-const { heavyFunction } = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction'))
+// const { heavyFunction } = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction'))
 // const { heavyFunction } = require(path.resolve('app/api/heavy/utils/heavyFunction'))
 
 parentPort.on('message', async (data) => {
   try {
+    const { heavyFunction } = await require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction'))
+
     const result = heavyFunction(data)
     const base64 = Buffer.from(result).toString('base64')
     parentPort.postMessage({ base64 })
