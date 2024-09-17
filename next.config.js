@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'standalone',
-  outputFileTracingIncludes: {
-    'app/api/heavy/utils': ['./heavyFunction.js'],
+  experimental: {
+    outputFileTracingIncludes: {
+      'api/heavy/utils': ['./heavyFunction.js'],
+    },
   },
 }
 
