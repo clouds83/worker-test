@@ -13,7 +13,7 @@ const { parentPort } = require('worker_threads')
 // const { heavyFunction } = require(path.resolve('./heavyFunction.js'))
 // const { heavyFunction } = require(path.join(process.cwd(), '../../app/api/heavy/utils/heavyFunction.js'))
 // const { heavyFunction } = require(path.resolve('app/api/heavy/utils/heavyFunction.js'))
-const heavyFunction = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction'))
+const heavyFunction = require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
 
 parentPort.on('message', async (data) => {
   try {
