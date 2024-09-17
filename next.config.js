@@ -6,6 +6,10 @@ const nextConfig = {
   //     'api/heavy/utils': ['./heavyFunction.js'],
   //   },
   // },
+  // webpack: (config) => {
+  //   config.resolve.alias['@utils'] = path.join(__dirname, 'app/api/heavy/utils')
+  //   return config
+  // },
 }
 
 module.exports = nextConfig
