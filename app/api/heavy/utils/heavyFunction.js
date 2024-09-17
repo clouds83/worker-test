@@ -3,4 +3,4 @@ function heavyFunction(multiplier) {
   return 'Heavy process done!'
 }
 
-module.exports = { heavyFunction }
+module.exports = heavyFunction
