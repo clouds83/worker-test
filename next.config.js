@@ -1,3 +1,5 @@
+const path = require('path')
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // output: 'standalone',
@@ -7,7 +9,7 @@ const nextConfig = {
   //   },
   // },
   webpack: (config) => {
-    config.resolve.alias['@utils'] = path.join(__dirname, 'app/api/heavy/utils')
+    config.resolve.alias['@utils'] = 'app/api/heavy/utils'
     return config
   },
 }
