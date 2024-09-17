@@ -1,6 +1,6 @@
-function heavyfunction(multiplier) {
+function heavyFunction(multiplier) {
   for (let i = 0; i < 1000000000 * multiplier; i++) {}
   return 'Heavy process done!'
 }
 
-module.exports = heavyfunction
+module.exports = heavyFunction
