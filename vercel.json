@@ -1,6 +1,6 @@
 {
   "functions": {
-    "app/api/heavy/utils/worker.js": {
+    "api/heavy/utils/worker.js": {
       "includeFiles": "app/api/heavy/utils/heavyFunction.js"
     }
   }
