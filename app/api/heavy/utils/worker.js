@@ -19,7 +19,7 @@ const heavyFunction = require('./public/heavyFunction.js')
 
 parentPort.on('message', async (data) => {
   try {
-    console.log('heavyFunction', path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
+    // console.log('heavyFunction', path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
 
     // const heavyFunction = await require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
 
