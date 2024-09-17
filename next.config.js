@@ -2,7 +2,7 @@
 const nextConfig = {
   experimental: {
     outputFileTracingIncludes: {
-      'api/heavy/utils': ['./**'],
+      'app/api/heavy/utils': ['./**'],
     },
   },
 }
