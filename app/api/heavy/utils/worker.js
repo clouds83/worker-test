@@ -21,6 +21,8 @@ parentPort.on('message', async (data) => {
   try {
     const heavyFunction = await require(path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
 
+    console.log('heavyFunction', path.join(process.cwd(), 'app/api/heavy/utils/heavyFunction.js'))
+
     const result = heavyFunction(data)
     const base64 = Buffer.from(result).toString('base64')
     parentPort.postMessage({ base64 })

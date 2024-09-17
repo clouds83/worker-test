@@ -4,12 +4,13 @@ export default async function Home() {
   async function heavyProcess() {
     'use server'
     const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-    const response = fetch(`${baseUrl}/api/heavy`, {
+
+    fetch(`${baseUrl}/api/heavy`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: 2,
+      body: 5,
     })
       .then((res) => res.json())
       .then((data) => {
