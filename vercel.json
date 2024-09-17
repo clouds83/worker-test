@@ -1,7 +1,7 @@
 {
   "functions": {
-    "app/api/heavy/utils/heavyFunction.js": {
-      "includeFiles": "app/api/heavy/utils/heavyFunction.js"
+    "api/heavy/utils/worker.js": {
+      "includeFiles": "api/heavy/utils/heavyFunction.js"
     }
   }
 }
