@@ -10,7 +10,7 @@ export default async function Home() {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: 5,
+      body: 2,
     })
       .then((res) => res.json())
       .then((data) => {
